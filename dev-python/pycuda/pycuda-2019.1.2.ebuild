@@ -25,7 +25,7 @@ RDEPEND="
 	dev-util/nvidia-cuda-toolkit
 	x11-drivers/nvidia-drivers
 	opengl? ( virtual/opengl )
-	<sys-devel/gcc-8.4"
+	<sys-devel/gcc-9"
 DEPEND="${RDEPEND}
 	test? (
 		dev-python/mako[${PYTHON_USEDEP}]
