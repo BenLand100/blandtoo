@@ -34,14 +34,13 @@ src_compile() {
 	echo "Building Client"
 	emake all
 	echo "Building Module"
-	linux-mod_src_compile
+	KERNEL_VER="${KV_FULL}" linux-mod_src_compile KERNEL_VER="${KV_FULL}"
 }
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/" install
 	linux-mod_src_install
 	mkdir -p ${D}/etc/modules-load.d/
-	echo "videodev" >> ${D}/etc/modules-load.d/droidcam.conf
 	echo "v4l2loopback_dc" >> ${D}/etc/modules-load.d/droidcam.conf
 	mkdir -p ${D}/etc/modprobe.d/
 	echo "options v4l2loopback_dc width=640 height=480" >> ${D}/etc/modprobe.d/droidcam.conf
