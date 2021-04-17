@@ -4,7 +4,7 @@
 EAPI=7
 
 DISTUTILS_USE_SETUPTOOLS=rdepend
-PYTHON_COMPAT=( python{2_7,3_{6,7,8}} )
+PYTHON_COMPAT=( python{2_7,3_{6,7,8,9}} )
 PYTHON_REQ_USE="sqlite?,threads(+)"
 
 # The usual required for tests
