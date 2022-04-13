@@ -17,7 +17,7 @@ DEPEND="app-arch/lzma
 		dev-libs/icu
 		app-arch/zstd
 		dev-libs/xapian
-		sys-libs/e2fsprogs-libs"
+		sys-fs/e2fsprogs"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
