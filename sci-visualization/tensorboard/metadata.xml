@@ -6,9 +6,9 @@
 		<name>Jason Zaman</name>
 	</maintainer>
 	<longdescription lang="en">
-		Keras Preprocessing is the data preprocessing and data augmentation module of the Keras deep learning library. It provides utilities for working with image data, text data, and sequence data.
+		TensorBoard is a suite of web applications for inspecting and understanding your TensorFlow runs and graphs.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">keras-team/keras-preprocessing</remote-id>
+		<remote-id type="github">tensorflow/tensorboard</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -6,9 +6,11 @@
 		<name>Jason Zaman</name>
 	</maintainer>
 	<longdescription lang="en">
-		Keras Preprocessing is the data preprocessing and data augmentation module of the Keras deep learning library. It provides utilities for working with image data, text data, and sequence data.
+		TensorFlow Estimator is a high-level TensorFlow API that greatly
+		simplifies machine learning programming. Estimators encapsulate
+		training, evaluation, prediction, and exporting for your model.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">keras-team/keras-preprocessing</remote-id>
+		<remote-id type="github">tensorflow/estimator</remote-id>
 	</upstream>
 </pkgmetadata>

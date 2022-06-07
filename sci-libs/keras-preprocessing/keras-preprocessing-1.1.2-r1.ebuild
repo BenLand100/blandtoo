@@ -1,19 +1,21 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9} )
+PYTHON_COMPAT=( python3_{7,8,9,10,11} )
 inherit distutils-r1
+MY_PN="Keras_Preprocessing"
 
 DESCRIPTION="Easy data preprocessing and data augmentation for deep learning models"
 HOMEPAGE="https://keras.io/"
-SRC_URI="https://github.com/keras-team/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/source/${MY_PN::1}/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/scipy[${PYTHON_USEDEP}]
