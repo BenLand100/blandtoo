@@ -2,17 +2,18 @@ diff --git a/src/slic3r/GUI/ScriptExecutor.cpp b/src/slic3r/GUI/ScriptExecutor.c
 index f32e44204..272af5ec3 100644
 --- a/src/slic3r/GUI/ScriptExecutor.cpp
 +++ b/src/slic3r/GUI/ScriptExecutor.cpp
-@@ -10,9 +10,9 @@
- #include <boost/algorithm/string/erase.hpp>
- #include <boost/algorithm/string/split.hpp>
- #include <boost/filesystem.hpp>
--#include <boost/filesystem/string_file.hpp>
+@@ -5,8 +5,11 @@
+ #include "libslic3r/PresetBundle.hpp"
+ #include "libslic3r/Print.hpp"
  
++#include <fstream>
  #include <string>
-+#include <fstream> 
-
+ 
++#include <boost/filesystem.hpp>
++
  #include <angelscript/source/as_config.h>
  #include <angelscript/add_on/autowrapper/aswrappedcall.h>
+ #include <angelscript/add_on/scriptarray/scriptarray.h>
 @@ -616,6 +619,17 @@ bool as_is_enabled(std::string &key)
      return f->is_enabled();
  }

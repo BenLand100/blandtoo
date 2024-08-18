@@ -5,7 +5,7 @@ EAPI=8
 
 WX_GTK_VER="3.0-gtk3"
 MY_PN="SuperSlicer"
-SLICER_PROFILES_COMMIT="f6b1b123062a77101fe350f6d2a2a57be9adc684"
+SLICER_PROFILES_COMMIT="ca25c7ec55dcc6073da61e39692c321cdb6497dc"
 
 inherit cmake wxwidgets xdg flag-o-matic
 
@@ -18,7 +18,7 @@ SRC_URI="
 
 LICENSE="AGPL-3 Boost-1.0 GPL-2 LGPL-3 MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="test"
 
 RESTRICT="test"
@@ -55,20 +55,20 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${P}-boost.patch"
-	"${FILESDIR}/${P}-cereal.patch"
-	"${FILESDIR}/${P}-dont-install-angelscript.patch"
-	"${FILESDIR}/${P}-gcodeviewer-symlink-fix.patch"
-	"${FILESDIR}/${P}-missing-includes-fix.patch"
-	"${FILESDIR}/${P}-openexr3.patch"
-	"${FILESDIR}/${P}-wxgtk3-wayland-fix.patch"
-	"${FILESDIR}/${P}-relax-OpenCASCADE-dep.patch"
-	"${FILESDIR}/${P}-link-occtwrapper-statically.patch"
-	"${FILESDIR}/${P}-fix-dereferencing-in-std-unique_ptr-to-nullptr.patch"
-	"${FILESDIR}/${P}-additional-imports-fixes.patch"
-	"${FILESDIR}/${P}-fix-MeshBoolean-const.patch"
-	"${FILESDIR}/${P}-libnest2d-link-xcb.patch"
-	"${FILESDIR}/${P}-boost-replace-load-string-file.patch"
+	"${FILESDIR}/${PN}-2.5.60.0-boost.patch"
+	"${FILESDIR}/${PN}-2.5.59.2-cereal.patch"
+	"${FILESDIR}/${PN}-2.5.59.2-dont-install-angelscript.patch"
+	#"${FILESDIR}/${PN}-2.5.59.2-gcodeviewer-symlink-fix.patch"
+	"${FILESDIR}/${PN}-2.5.60.0-missing-includes-fix.patch"
+	"${FILESDIR}/${PN}-2.5.59.2-openexr3.patch"
+	"${FILESDIR}/${PN}-2.5.59.2-wxgtk3-wayland-fix.patch"
+	"${FILESDIR}/${PN}-2.5.59.2-relax-OpenCASCADE-dep.patch"
+	"${FILESDIR}/${PN}-2.5.59.2-link-occtwrapper-statically.patch"
+	#"${FILESDIR}/${PN}-2.5.59.8-additional-imports-fixes.patch"
+	"${FILESDIR}/${PN}-2.5.59.8-fix-compilation-error-gnu17.patch"
+	"${FILESDIR}/${PN}-2.5.59.8-libnest2d-link-xcb.patch"
+	"${FILESDIR}/${PN}-2.5.59.8-boost-replace-load-string-file.patch"
+	#"${FILESDIR}/${PN}-2.5.59.10-boost-1.85.patch"
 )
 
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -88,7 +88,7 @@ src_configure() {
 
 	local mycmakeargs=(
 		-DOPENVDB_FIND_MODULE_PATH="/usr/$(get_libdir)/cmake/OpenVDB"
-
+		
 		-DSLIC3R_BUILD_TESTS=$(usex test)
 		-DSLIC3R_FHS=ON
 		-DSLIC3R_GTK=3
