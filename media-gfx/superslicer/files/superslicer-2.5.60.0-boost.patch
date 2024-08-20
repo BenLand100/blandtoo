@@ -247,7 +247,7 @@ diff --git a/src/slic3r/GUI/ScriptExecutor.cpp b/src/slic3r/GUI/ScriptExecutor.c
 index e923bb5..354c79b 100644
 --- a/src/slic3r/GUI/ScriptExecutor.cpp
 +++ b/src/slic3r/GUI/ScriptExecutor.cpp
-@@ -4,6 +4,13 @@
+@@ -4,5 +4,11 @@
  #include "Tab.hpp"
  #include "libslic3r/PresetBundle.hpp"
  #include "libslic3r/Print.hpp"
@@ -258,8 +258,7 @@ index e923bb5..354c79b 100644
 +#include <boost/algorithm/string/split.hpp>
 +#include <boost/filesystem.hpp>
  
- #include <string>
- 
+ #include <string> 
 diff --git a/src/slic3r/GUI/Tab.cpp b/src/slic3r/GUI/Tab.cpp
 index 340369e..837982e 100644
 --- a/src/slic3r/GUI/Tab.cpp
