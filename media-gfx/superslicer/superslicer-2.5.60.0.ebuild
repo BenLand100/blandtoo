@@ -62,7 +62,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.5.60.0-missing-includes-fix.patch"
 	"${FILESDIR}/${PN}-2.5.59.2-openexr3.patch"
 	"${FILESDIR}/${PN}-2.5.59.2-wxgtk3-wayland-fix.patch"
-	"${FILESDIR}/${PN}-2.5.59.2-relax-OpenCASCADE-dep.patch"
+	"${FILESDIR}/${PN}-2.5.60.0-relax-OpenCASCADE-dep.patch"
 	"${FILESDIR}/${PN}-2.5.59.2-link-occtwrapper-statically.patch"
 	#"${FILESDIR}/${PN}-2.5.59.8-additional-imports-fixes.patch"
 	"${FILESDIR}/${PN}-2.5.59.8-fix-compilation-error-gnu17.patch"
